@@ -1,0 +1,190 @@
+
+    .about-content img {
+        width: 150px;
+        height: auto;
+        float: left; /* Float the image to the left */
+        margin-right: 20px; 
+    }
+
+    body {
+        background-color: #E3EDF8;
+    }
+
+    h2 {
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+
+    nav {
+        font-family: sans-serif;
+    }
+
+    /* Horizontal navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px; /* Adjust the spacing between links as needed */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+}
+
+/* Style the links */
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    padding: 10px; /* Add padding to make the clickable area larger */
+    transition: color 0.3s; /* Smooth transition for color change */
+    font-size: 18px; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Change link color on hover */
+nav ul li a:hover {
+    color: darkblue;
+}
+
+/* Change link color when clicked */
+nav ul li a:active {
+    color: darkblue;
+}
+
+/* Position the search bar and icons */
+.search-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 200px; 
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Position the profile icon */
+.profile-icon {
+    position: absolute;
+    top: 10px;
+    right: 70px;
+}
+
+/* Style the black line */
+.black-line {
+    border: none;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: black;
+    margin-top: 20px; /* Add padding above the line */
+}
+
+/* Flexbox layout for horizontal alignment */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure both sections have the same height */
+}
+
+.services-container, .about-us {
+    flex: 1; /* Make both sections expand to fill available space */
+}
+
+/* Style for the left border */
+.about-us {
+    border-left: 2px solid black; /* Add left border */
+    padding-left: 20px; 
+}
+
+/* Style for the contact form */
+.contact {
+    margin-top: 20px; /* Add some space above the contact form */
+    padding: 20px; /* Add padding to the contact form */
+    background-color: #E3EDF8; /* Background color for the contact form */
+}
+
+/* Style for the form groups */
+.form-group {
+    margin-bottom: 20px; /* Add space between each form group */
+}
+
+/* Style for the input fields */
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact textarea {
+    width: 100%; /* Make input fields fill the width of the contact form */
+    padding: 10px; /* Add padding to the input fields */
+    border: 1px solid #ccc; /* Add border to the input fields */
+    border-radius: 5px; /* Add border radius to the input fields */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Style for the submit button */
+.contact button[type="submit"] {
+    float: right; /* Align the button to the right */
+    width: 150px; /* Set the width of the button */
+    padding: 10px; /* Add padding to the button */
+    background-color: #0097B2; /* Background color of the button */
+    color: #ffffff; /* Text color of the button */
+    border: none; /* Remove border from the button */
+    border-radius: 5px; /* Add border radius to the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Adjustments for the navigation bar */
+    .top-bar {
+        flex-direction: column; /* Change to vertical layout */
+    }
+
+    .search-bar {
+        order: 2; /* Move search bar to the bottom */
+    }
+
+    nav {
+        order: 1; /* Move navigation links to the top */
+        margin-bottom: 20px; /* Add space below navigation links */
+    }
+
+    /* Make navigation bar smaller */
+    nav ul {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Adjust spacing between links */
+    }
+
+    /* Adjustments for content sections */
+    .content {
+        flex-direction: column; /* Change to vertical layout */
+    }
+
+    .services-container, .about-us {
+        width: 100%; /* Set width to full for mobile */
+    }
+
+    /* Adjustments for the contact form */
+    .contact button[type="submit"] {
+        float: none; /* Remove float */
+        width: 100%; /* Set width to full for mobile */
+    }
+
+    .about-us {
+        border-left: none;
+        padding-left: 0; /* Remove padding */
+    }
+}
